@@ -2,9 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 import path from 'path';
 import { Language } from './src/data/Languages';
 
-process.env.DOTENV_KEY = '';
-process.env.DOTENV_CONFIG_SILENT = 'true';
-
 const env = process.env.ENV || 'local';
 const envPath = path.resolve(__dirname, 'src/config/env', `${env.toLowerCase()}.env`);
 require('dotenv').config({ path: envPath });
