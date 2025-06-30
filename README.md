@@ -1,6 +1,8 @@
 # Playwright Test Automation Framework
 
-A modern, scalable test automation framework built with Playwright and TypeScript, designed for efficient end-to-end testing across multiple browsers and devices.
+## Overview
+
+This repository contains end-to-end automated tests, designed to accelerate release cycles and improve quality assurance process. The suite leverages Playwright for browser automation and TypeScript for robust, maintainable code.
 
 ## 🚀 Features
 
@@ -23,19 +25,16 @@ A modern, scalable test automation framework built with Playwright and TypeScrip
 ## 🛠️ Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:Marc-AC-93/playwright-template.git
    cd playwright-template
    ```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
 
-3. Install Playwright browsers:
    ```bash
-   npx playwright install --with-deps
+   npm run update
    ```
 
 ## 🏗️ Project Structure
@@ -89,22 +88,6 @@ npm test -- --cli --env=local --projects=chrome --tags=smoke,regression
 - `--env <env>`: Environment to run tests against (local, stage, prod)
 - `--projects <projects>`: Comma-separated list of projects to run tests on (chrome, safari, mobile_chrome, mobile_safari)
 - `--tags <tags>`: Comma-separated list of test tags to filter tests by
-
-### Running in Docker
-
-Build and start the Docker container:
-
-```bash
-npm run docker:build
-```
-
-Execute tests inside the container:
-
-```bash
-npm run docker:sh
-# Then inside the container:
-npm test
-```
 
 ## 📊 Reporting
 
@@ -160,12 +143,6 @@ npm run lint:fix
 
 ### Updating Dependencies
 
-Update Playwright and dependencies:
-
-```bash
-npm run upgradePlaywright
-```
-
 Update all dependencies:
 
 ```bash
@@ -191,11 +168,13 @@ Modify `playwright.config.ts` to adjust timeouts, browser settings, and other Pl
 
 ## 🤝 Contributing
 
-1. Follow the established code structure and patterns
-2. Ensure all tests pass before submitting changes
-3. Add appropriate documentation for new features
-4. Use the provided linting and formatting tools
-
-## 📄 License
-
-ISC
+- Follow Clean Code principles:
+  - SOLID (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion): Follow the SOLID principles to make the code more maintainable and extensible.
+  - DRY (Don’t Repeat Yourself): Avoid duplicating logic.
+  - KISS (Keep It Simple, Stupid): Avoid overcomplicating the code.
+  - Meaningful Names: Use clear, descriptive names for variables, functions, classes...
+  - Small Functions: Functions should do one thing only, and do it well.
+  - Avoid Magic Numbers and Strings: Use constants or enums to give meaning value.
+  - Use Descriptive Function Signatures: Let the function tell its story through its name and parameters.
+  - Minimize Side Effects: Functions should be predictable and not unexpectedly modify external state.
+  - Comment Only When Necessary: Write code so clear that comments are only needed for context, not explanation.
