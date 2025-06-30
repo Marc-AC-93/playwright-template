@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+coverage
+.next
+.nuxt
+.cache
+.vscode
+.idea
+*.log
+*.lock
+package-lock.json
+playwright-report
+allure-report
+allure-results
+xray-report

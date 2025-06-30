@@ -1,0 +1,13 @@
+services:
+  playwright:
+    image: playwright
+    container_name: playwright
+    tty: true
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./allure-results:/app/allure-results
+      - ./xray-report:/app/xray-report

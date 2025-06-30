@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+coverage
+.next
+.nuxt
+.cache
+playwright-report
+allure-report
+allure-results
+xray-report
+*.config.js

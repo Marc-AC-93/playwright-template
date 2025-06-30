@@ -1,0 +1,47 @@
+{
+  "name": "playwright_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "npm install && npm install -D @playwright/test@latest && npx playwright install --with-deps",
+    "pretest": "npm run build",
+    "build": "tsc",
+    "test": "node dist/src/cli.js",
+    "local": "node dist/src/cli.js --cli --env local",
+    "stage": "node dist/src/cli.js --cli --env stage",
+    "prod": "node dist/src/cli.js --cli --env prod",
+    "docker:build": "docker-compose up -d --build",
+    "docker:test": "docker exec playwright npm run local",
+    "docker:sh": "docker exec -it playwright sh",
+    "docker:stop": "docker stop playwright",
+    "docker:kill": "docker stop playwright && docker rm playwright",
+    "report": "npx playwright show-report",
+    "allure": "npx allure generate --clean allure-results && npx allure open",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json}\"",
+    "lint": "eslint --ext .ts ./src",
+    "lint:fix": "eslint --ext .ts ./src --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/commander": "^2.12.0",
+    "@types/node": "^24.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "allure-playwright": "^3.3.0",
+    "commander": "^14.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "inquirer": "^12.6.3"
+  }
+}
