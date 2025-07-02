@@ -1,6 +1,6 @@
 import { BrowserContext, Page, TestInfo, test } from '@playwright/test';
+import { ConfigManager, TestConfig } from '../config/ConfigManager';
 import { Language } from '../data/Languages';
-import { TestConfig, ConfigManager } from '../config/ConfigManager';
 import { BasePage } from './extensions/BasePage';
 import { LanguageManager } from './extensions/language-manager';
 
@@ -41,4 +41,4 @@ export function step(name: string) {
   };
 }
 
-export { BrowserContext, Locator, Page, expect, test } from '@playwright/test';
+export { BrowserContext, Locator, Page, expect } from '@playwright/test';
